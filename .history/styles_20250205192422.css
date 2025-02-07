@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: #C5E4E7;
+    --input-text-color: #00474B;
+    --primary-white: #fff;
+    --calculated-numbers-color: #26C2AE;
+    --input-title-color: #5E7A7D;
+    --input-background-color: #F3F9FA;
+    --input-icon-color: #9EBBBD;
+    --title-text-color: #3D6666;
+    --custom-input-color: #547878;
+}
+
+/* UTILITY CLASSES */
+.space-mono-regular {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .space-mono-bold {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .space-mono-regular-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .space-mono-bold-italic {
+    font-family: "Space Mono", serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+
+body {
+    background-color: var(--background-color, #C5E4E7);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Space Mono", monospace;
+}
+
+.container {
+    background-color: var(--primary-white);
+    width: 920px;
+    
+}
+

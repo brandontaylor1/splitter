@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --background-color: #C5e4e7;
+    --input-text-color: #00474B;
+    --primary-white: #fff;
+    --calculated-numbers-color: #26C2AE;
+    --input-title-color: #5E7A7D;
+    --input-background-color: #F3F9FA;
+    --input-icon-color: #9EBBBD;
+    --title-text-color: #3D6666;
+    
+}

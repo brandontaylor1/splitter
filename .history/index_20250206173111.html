@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Splitter | Tip Calculator</title>
+</head>
+<body>
+    <img src="./assets/images/logo.svg" id="logo-image" alt="logo image">
+    <main class="container">
+        <form>
+            <div class="left-column">
+                <div class="bill-input">
+                    <h2>Bill</h2>
+                    <input type="text" id="bill-input" placeholder="$0.00" value="$0.00">
+                </div>
+                <div class="tip-input">
+                    <h2 id="select-tip-title">Select Tip %</h2>
+                    <div class="tip-buttons">
+                        <button type="button" class="tip-button">5%</button>
+                        <button type="button" class="tip-button">10%</button>
+                        <button type="button" class="tip-button">15%</button>
+                        <button type="button" class="tip-button">25%</button>
+                        <button type="button" class="tip-button">50%</button>
+                        <input type="text" id="custom-tip" placeholder="Custom">  
+                    </div>
+                </div>
+                <div class="number-of-people-input">
+                    <h2 id="number-of-people-title">Number of People</h2>
+                    <input type="text" id="number-of-people-input" placeholder="0">
+                </div>
+            </div>
+        </form>
+        <div class="right-column">
+            <h1>Test</h1>
+        </div>
+    </main>
+</body>
+</html>

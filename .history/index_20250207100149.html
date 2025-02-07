@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Splitter | Tip Calculator</title>
+</head>
+<body>
+    <img src="./assets/images/logo.svg" id="logo-image" alt="logo image">
+    <main class="container">
+        <form>
+            <div class="left-column">
+                <div class="bill-input">
+                    <div class="bill-titles">
+                        <h2>Bill</h2>
+                        <p class="error-message" id="bill-error"></p>
+                    </div>
+                    <div class="bill-input-with-icon">
+                        <input type="number" min="0.00" max="10000.00" id="bill-input" placeholder="$0.00">
+                    </div>
+                </div>
+                <div class="tip-input">
+                    <h2 id="select-tip-title">Select Tip %</h2>
+                    <div class="tip-buttons">
+                        <button type="button" class="tip-button" value=".05">5%</button>
+                        <button type="button" class="tip-button" value=".10">10%</button>
+                        <button type="button" class="tip-button" value=".15">15%</button>
+                        <button type="button" class="tip-button" value=".25">25%</button>
+                        <button type="button" class="tip-button" value=".50">50%</button>
+                        <input type="text" id="custom-tip" placeholder="Custom">  
+                    </div>
+                </div>
+                <div class="number-of-people-input">
+                    <div class="people-titles">
+                        <h2 id="number-of-people-title">Number of People</h2>
+                        <p class="error-message" id="people-error"></p>
+                    </div>
+                    <div class="person-input-with-icon">
+                        <input type="number" id="number-of-people-input" placeholder="0">
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="right-column">
+                <div class="info-container">
+                    <div class="tip-calculations">
+                        <div class="tip-amount">
+                            <div class="info">
+                                <h3>Tip Amount</h3>
+                                <p>/ person</p>
+                            </div>
+                            <div class="amount">
+                                <h1 id="tip-amount">${0.00}</h1>
+                            </div>
+                        </div>
+                        <div class="total">
+                            <div class="info">
+                                <h3>Total</h3>
+                                <p>/ person</p>
+                            </div>
+                            <div class="amount">
+                                <h1 id="total-amount">$0.00</h1>
+                            </div>
+                        </div>
+                    </div>
+            <button type="button" id="reset-button">
+                RESET
+            </button>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
