@@ -127,6 +127,7 @@ input {
     font-weight: 600;
 }
 
+
 .bill-input-with-icon input {
     width: 100%;
     font-family: "Space Mono", monospace;
@@ -292,9 +293,6 @@ input {
     align-items: center;
 }
 
-#form-error {
-    font-size: 18px;
-}
 
 @media screen and (max-width: 852px) {
     .container {

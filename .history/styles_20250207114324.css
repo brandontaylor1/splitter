@@ -292,9 +292,10 @@ input {
     align-items: center;
 }
 
-#form-error {
+form-error {
     font-size: 18px;
 }
+
 
 @media screen and (max-width: 852px) {
     .container {
