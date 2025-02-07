@@ -317,7 +317,7 @@ input {
 
     .container {
         width: 90%;
-        height: auto;
+        height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -347,7 +347,6 @@ input {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: auto;
     }
 
     .info-container {
