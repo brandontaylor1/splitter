@@ -54,7 +54,7 @@ body {
 }
 
 #logo-image {
-    margin: 50px 0;
+    margin-bottom: 87px;
 }
 
 
@@ -291,96 +291,5 @@ input {
 
 
 @media screen and (max-width: 852px) {
-    .container {
-        width: 90%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    .right-column {
-        grid-column: 1 / 2;
-        width: 100%;
-        height: 100%;
-        border-radius: 15px;
-        background-color: var(--input-text-color);
-    }
-
-    .left-column {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-    }
-
-    .right-column {
-        background-color: #00474B;
-        padding: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .info-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-    }
-
-    .tip-amount, .total {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        color: var(--primary-white); 
-    }
-
-    .amount {
-        color: #26C2AE;
-        font-size: 24px;
-        font-family: "Space Mono", monospace;
-    }
-
-    .info h3 {
-        font-size: 16px;
-        color: var(--primary-white);
-    }
-
-    .info p {
-        font-size: 13px;
-        color: #7F9D9F;
-        font-family: "Space Mono", monospace;
-        font-weight: 700;
-    }
-
-    .button-container {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #calculate-button   {
-        padding: 9px 40px;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-        background-color: #26C2AE;
-        color: #00474B;
-        border-radius: 5px;
-        font-size: 20px;
-        font-weight: 600;
-        font-family: "Space Mono", monospace;
-        margin-bottom: 10px;
-    }
-
-    #reset-button {
-        padding: 9px 40px;
-        text-align: center;
-        border: none;
-        cursor: pointer;
-        background-color: #26C2AE;
-    }
+    
 }
