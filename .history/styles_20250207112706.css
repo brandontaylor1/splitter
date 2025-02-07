@@ -185,12 +185,6 @@ input {
     color: #00474B;
 }
 
-.disabled {
-    background-color: #00474B;
-    color: #5E7A7D;
-    opacity: .5;
-}
-
 #custom-tip {
     width: 117px;
     height: 48px;

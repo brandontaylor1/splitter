@@ -188,7 +188,6 @@ input {
 .disabled {
     background-color: #00474B;
     color: #5E7A7D;
-    opacity: .5;
 }
 
 #custom-tip {

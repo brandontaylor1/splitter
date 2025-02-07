@@ -1,11 +1,10 @@
 const billInput = document.querySelector("#bill-input");
 const peopleInput = document.querySelector("#number-of-people-input");
+const peopleError = document.querySelector("#people-error");
 const tip = document.querySelector("#tip-amount");
 const total = document.querySelector("#total-amount");
-const peopleError = document.querySelector("#people-error");
-const formError = document.querySelector('#form-error')
-const billError = document.querySelector('#bill-error')
-const tipError = document.querySelector('#tip-error')
+const 
+
 const tipButtons = document.querySelectorAll('.tip-button')
 
 const calculateBtn = document.querySelector("#calculate-button");
@@ -37,7 +36,7 @@ function validateAmount(input) {
         console.log(billAmount);
     } else {
         console.log("Invalid input. Please enter a valid number");
-        billError.textContent = "Please enter a valid number";
+        peopleError.textContent = "Please enter a valid number";
     }
 }
 
@@ -67,25 +66,20 @@ function calculateTotalAmount(bill, tipAmount, people) {
 }
 
 calculateBtn.addEventListener("click", () => {
-    if(billAmount === undefined
-    || tipPercentage === undefined
-    || numberOfPeople === undefined) {
-        formError.innerText = "Please fill out all fields"
-        billError.innerText = "Please enter a bill amount"
-        tipError.innerText = "Please select a tip percentage"
-        peopleError.textContent = "Please enter a valid number";
+    if(billAmount === ""
+    || tipPercentage === ""
+    || numberOfPeople === "") {
+        console.log("Please fill out all fields")
         return
-    } else {
-        formError.innerText = ""
-        billError.innerText = ""
-        tipError.innerText = ""
-        peopleError.textContent = ""
     }
+    )
+
+
+    console.log("Connected")
     calculateTipAmount(billAmount, tipPercentage, numberOfPeople)
     calculateTotalAmount(billAmount, tipAmount, numberOfPeople)
 
-    calculateBtn.disabled = true
-
+    // Reset the values
 })
 
 resetBtn.addEventListener("click", () => {

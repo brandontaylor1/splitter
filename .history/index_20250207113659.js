@@ -37,7 +37,7 @@ function validateAmount(input) {
         console.log(billAmount);
     } else {
         console.log("Invalid input. Please enter a valid number");
-        billError.textContent = "Please enter a valid number";
+        bill.textContent = "Please enter a valid number";
     }
 }
 

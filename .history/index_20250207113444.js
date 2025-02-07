@@ -37,7 +37,7 @@ function validateAmount(input) {
         console.log(billAmount);
     } else {
         console.log("Invalid input. Please enter a valid number");
-        billError.textContent = "Please enter a valid number";
+        peopleError.textContent = "Please enter a valid number";
     }
 }
 
@@ -84,8 +84,6 @@ calculateBtn.addEventListener("click", () => {
     calculateTipAmount(billAmount, tipPercentage, numberOfPeople)
     calculateTotalAmount(billAmount, tipAmount, numberOfPeople)
 
-    calculateBtn.disabled = true
-
 })
 
 resetBtn.addEventListener("click", () => {
@@ -101,6 +99,7 @@ resetBtn.addEventListener("click", () => {
     tipPercentage = 0
     billAmount = 0
     numberOfPeople = 0
+    
 
 })
 
