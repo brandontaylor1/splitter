@@ -288,9 +288,10 @@ input {
     font-family: "Space Mono", monospace;
 }
 
-#reset-button:hover, #calculate-button:hover {
+#reset-button:hover {
     background-color: #9FE8DF;
 }
+    color: ;
 
 .error-message {
     color: red;
