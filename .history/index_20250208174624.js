@@ -153,7 +153,7 @@ resetBtn.addEventListener("click", () => {
     billError.innerText = ""
     tipError.innerText = ""
     peopleError.innerText = ""
-    customTip.value = ""
+    
 
     calculateBtn.disabled = false
 

@@ -32,6 +32,17 @@ tipButtons.forEach(button => {
     })
 })
 
+customTip.addEventListener('input', ()  => {
+    if(customTip.value === "" || customTip.value === 0) {
+        tipPercentage = 0
+    } else if (customTip.value < 0 || )
+
+    tipButtons.forEach(button =>  button.classList.remove('active'))
+    tipPercentage = parseFloat(customTip.value) / 100
+    console.log(tipPercentage)
+})
+
+
 
 function validateAmount(input) {
     if(!isNaN(input) && input !== "" && input > 0) {
@@ -53,36 +64,6 @@ function validatePeople(input) {
         peopleError.textContent = "Please enter a valid number";
     }
 }
-
-function validateTip(input) {
-    if(!isNaN(input) && input !== "" && input > 0 && input < 50) {
-        const tip = parseFloat(input);
-        tipPercentage = tip;
-    } else {
-        console.log("Invalid input. Please enter a valid number");
-        tipError.textContent = "Please enter a valid number";
-    }
-}
-
-customTip.addEventListener("input", () => {
-    console.log(customTip.value);
-    validateTip(customTip.value);
-    tipButtons.forEach(button =>  button.classList.remove('active'))
-    tipPercentage = parseFloat(customTip.value) / 100
-    console.log(tipPercentage)
-});
-
-billInput.addEventListener("input", () => {
-    console.log(billInput.value); 
-    validateAmount(billInput.value); 
-})
-
-peopleInput.addEventListener("input", () => {
-    console.log(peopleInput.value);
-    validatePeople(peopleInput.value);
-})
-
-
 
 function calculateTipAmountPerPerson(bill, tip, people) {
     tipAmount = bill * tip
@@ -153,8 +134,17 @@ resetBtn.addEventListener("click", () => {
     billError.innerText = ""
     tipError.innerText = ""
     peopleError.innerText = ""
-    customTip.value = ""
 
     calculateBtn.disabled = false
 
+})
+
+billInput.addEventListener("input", () => {
+    console.log(billInput.value); 
+    validateAmount(billInput.value); 
+})
+
+peopleInput.addEventListener("input", () => {
+    console.log(peopleInput.value);
+    validatePeople(peopleInput.value);
 })

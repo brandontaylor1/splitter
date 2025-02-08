@@ -55,7 +55,7 @@ function validatePeople(input) {
 }
 
 function validateTip(input) {
-    if(!isNaN(input) && input !== "" && input > 0 && input < 50) {
+    if(!isNaN(input) && input !== "" && input > 0 && ) {
         const tip = parseFloat(input);
         tipPercentage = tip;
     } else {
@@ -153,7 +153,6 @@ resetBtn.addEventListener("click", () => {
     billError.innerText = ""
     tipError.innerText = ""
     peopleError.innerText = ""
-    customTip.value = ""
 
     calculateBtn.disabled = false
 

@@ -1,3 +1,5 @@
+const { default: _Draggable } = require("gsap/Draggable");
+
 const billInput = document.querySelector("#bill-input");
 const peopleInput = document.querySelector("#number-of-people-input");
 const tipAmountElement = document.getElementById("tip-amount");
@@ -32,6 +34,21 @@ tipButtons.forEach(button => {
     })
 })
 
+customTip.addEventListener('input', ()  => {
+    if(customTip.value === "" || customTip.value === 0) {
+        tipPercentage = 0
+    } else if (customTip.value < 0 || customTip.value > 100) {
+        formError.innerText = "Please enter a valid number between 0 and 100"
+    } else {
+        formError.innerText = ""
+    }
+
+    tipButtons.forEach(button =>  button.classList.remove('active'))
+    tipPercentage = parseFloat(customTip.value) / 100
+    console.log(tipPercentage)
+})
+
+
 
 function validateAmount(input) {
     if(!isNaN(input) && input !== "" && input > 0) {
@@ -55,7 +72,7 @@ function validatePeople(input) {
 }
 
 function validateTip(input) {
-    if(!isNaN(input) && input !== "" && input > 0 && input < 50) {
+    if(!isNaN(input) && input !== "" && input > 0) {
         const tip = parseFloat(input);
         tipPercentage = tip;
     } else {
@@ -64,13 +81,7 @@ function validateTip(input) {
     }
 }
 
-customTip.addEventListener("input", () => {
-    console.log(customTip.value);
-    validateTip(customTip.value);
-    tipButtons.forEach(button =>  button.classList.remove('active'))
-    tipPercentage = parseFloat(customTip.value) / 100
-    console.log(tipPercentage)
-});
+customTip.addEventListener("input", () => {}
 
 billInput.addEventListener("input", () => {
     console.log(billInput.value); 
@@ -153,7 +164,6 @@ resetBtn.addEventListener("click", () => {
     billError.innerText = ""
     tipError.innerText = ""
     peopleError.innerText = ""
-    customTip.value = ""
 
     calculateBtn.disabled = false
 

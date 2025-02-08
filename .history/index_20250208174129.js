@@ -1,3 +1,5 @@
+const { default: _Draggable } = require("gsap/Draggable");
+
 const billInput = document.querySelector("#bill-input");
 const peopleInput = document.querySelector("#number-of-people-input");
 const tipAmountElement = document.getElementById("tip-amount");
@@ -55,7 +57,7 @@ function validatePeople(input) {
 }
 
 function validateTip(input) {
-    if(!isNaN(input) && input !== "" && input > 0 && input < 50) {
+    if(!isNaN(input) && input !== "" && input > 0) {
         const tip = parseFloat(input);
         tipPercentage = tip;
     } else {
@@ -65,8 +67,6 @@ function validateTip(input) {
 }
 
 customTip.addEventListener("input", () => {
-    console.log(customTip.value);
-    validateTip(customTip.value);
     tipButtons.forEach(button =>  button.classList.remove('active'))
     tipPercentage = parseFloat(customTip.value) / 100
     console.log(tipPercentage)
@@ -153,7 +153,6 @@ resetBtn.addEventListener("click", () => {
     billError.innerText = ""
     tipError.innerText = ""
     peopleError.innerText = ""
-    customTip.value = ""
 
     calculateBtn.disabled = false
 
