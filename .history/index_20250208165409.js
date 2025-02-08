@@ -14,10 +14,7 @@ const tipError = document.querySelector('#tip-error')
 
 let billAmount = 0
 let tipPercentage = 0
-let tipPerPerson = 0
-let totalPerPerson = 0
 let numberOfPeople = 0
-
 
 tipButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -26,15 +23,13 @@ tipButtons.forEach(button => {
         } else {
             button.classList.add('active')
         }
-        tipPercentage = parseFloat(button.value);
-        customTip.value = " ";
+        tipPercentage = button.value
         console.log(tipPercentage)
     })
 })
 
 customTip.addEventListener('input', ()  => {
-    tipButtons.forEach(button =>  button.classList.remove('active'))
-    tipPercentage = parseFloat(customTip.value) / 100
+    tipPercentage = customTip.value / 100
     console.log(tipPercentage)
 })
 
@@ -61,13 +56,11 @@ function validatePeople(input) {
     }
 }
 
-function calculateTipAmountPerPerson(bill, tip, people) {
-    tipAmount = bill * tip
-    tipPerPerson = tipAmount / people
-    return tipPerPerson
+function calculateTipAmount(bill, tipCalculated, people) {
+    return (bill * tipCalculated) / people
 }
 
-function calculateTotalAmountPerPerson(bill, tipAmount, people) {
+function calculateTotalAmount(bill, tipAmount, people) {
     return (bill + tipAmount) / people
     
 }
@@ -103,11 +96,11 @@ calculateBtn.addEventListener("click", () => {
     }
     
     
-    tipPerPerson = calculateTipAmountPerPerson(billAmount, tipPercentage, numberOfPeople)
-    totalPerPerson = calculateTotalAmountPerPerson(billAmount, tipAmount, numberOfPeople)
+    const tipAmount = calculateTipAmount(billAmount, tipPercentage, numberOfPeople)
+    const totalAmount = calculateTotalAmount(billAmount, tipAmount, numberOfPeople)
 
-    tipAmountElement.innerText = `$${tipPerPerson.toFixed(2)}`;
-    totalAmountElement.innerText = `$${totalPerPerson.toFixed(2)}`;
+    tipAmountElement.innerText = `$${tipAmount.toFixed(2)}`;
+    totalAmountElement.innerText = `$${totalAmount.toFixed(2)}`;
 
     calculateBtn.disabled = true;
 
@@ -144,3 +137,6 @@ peopleInput.addEventListener("input", () => {
     console.log(peopleInput.value);
     validatePeople(peopleInput.value);
 })
+
+
+

@@ -103,11 +103,11 @@ calculateBtn.addEventListener("click", () => {
     }
     
     
-    tipPerPerson = calculateTipAmountPerPerson(billAmount, tipPercentage, numberOfPeople)
-    totalPerPerson = calculateTotalAmountPerPerson(billAmount, tipAmount, numberOfPeople)
+    tipAmount = calculateTipAmountPerPerson(billAmount, tipPercentage, numberOfPeople)
+    totalAmount = calculateTotalAmountPerPerson(billAmount, tipAmount, numberOfPeople)
 
-    tipAmountElement.innerText = `$${tipPerPerson.toFixed(2)}`;
-    totalAmountElement.innerText = `$${totalPerPerson.toFixed(2)}`;
+    tipAmountElement.innerText = `$${tipAmount.toFixed(2)}`;
+    totalAmountElement.innerText = `$${totalAmount.toFixed(2)}`;
 
     calculateBtn.disabled = true;
 

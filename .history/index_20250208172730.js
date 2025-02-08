@@ -14,8 +14,8 @@ const tipError = document.querySelector('#tip-error')
 
 let billAmount = 0
 let tipPercentage = 0
-let tipPerPerson = 0
-let totalPerPerson = 0
+let tipAmount = 0
+let totalAmount = 0
 let numberOfPeople = 0
 
 
@@ -62,9 +62,7 @@ function validatePeople(input) {
 }
 
 function calculateTipAmountPerPerson(bill, tip, people) {
-    tipAmount = bill * tip
-    tipPerPerson = tipAmount / people
-    return tipPerPerson
+    return (bill * tip) / people
 }
 
 function calculateTotalAmountPerPerson(bill, tipAmount, people) {
@@ -103,11 +101,14 @@ calculateBtn.addEventListener("click", () => {
     }
     
     
-    tipPerPerson = calculateTipAmountPerPerson(billAmount, tipPercentage, numberOfPeople)
-    totalPerPerson = calculateTotalAmountPerPerson(billAmount, tipAmount, numberOfPeople)
+    tipAmount = calculateTipAmountPerPerson(billAmount, tipPercentage, numberOfPeople)
+    totalAmount = calculateTotalAmountPerPerson(billAmount, tipAmount, numberOfPeople)
 
-    tipAmountElement.innerText = `$${tipPerPerson.toFixed(2)}`;
-    totalAmountElement.innerText = `$${totalPerPerson.toFixed(2)}`;
+    console.log(tipAmount);
+    console.log(totalAmount);
+
+    tipAmountElement.innerText = `$${tipAmount.toFixed(2)}`;
+    totalAmountElement.innerText = `$${totalAmount.toFixed(2)}`;
 
     calculateBtn.disabled = true;
 
